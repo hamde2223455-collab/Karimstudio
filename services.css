@@ -1,0 +1,176 @@
+/* ================================
+   Services Page – Karim
+   File: css/services.css
+================================ */
+
+/* ألوان الموقع */
+:root {
+    --blue: #00224D;
+    --purple: #5C2ED5;
+    --turquoise: #2CD3E1;
+    --gradient: linear-gradient(135deg, #2CD3E1, #5C2ED5, #00224D);
+}
+
+/* ================================
+   الصفحة كاملة
+================================ */
+body {
+    margin: 0;
+    padding: 0;
+    background: var(--blue);
+    font-family: "Cairo", sans-serif;
+    color: #fff;
+}
+
+/* ================================
+   الهيدر
+================================ */
+.main-header {
+    width: 100%;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 200;
+    background: rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(6px);
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: 900;
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: .3s;
+}
+
+.nav ul li a:hover,
+.nav ul li a.active {
+    color: var(--turquoise);
+    font-weight: 700;
+}
+
+/* ================================
+   عنوان الصفحة + وصف
+================================ */
+.services-page {
+    width: 90%;
+    margin: 150px auto 80px;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 55px;
+    font-weight: 900;
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    color: transparent;
+    margin-bottom: 15px;
+}
+
+.section-desc {
+    font-size: 20px;
+    opacity: .9;
+    margin-bottom: 60px;
+    line-height: 1.9;
+}
+
+/* ================================
+   كروت الخدمات
+================================ */
+.services-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px;
+}
+
+.service-card {
+    background: #ffffff10;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    backdrop-filter: blur(6px);
+    border-top: 6px solid var(--purple);
+    transition: .3s;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+    position: relative;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.35);
+}
+
+/* الأيقونة */
+.service-icon {
+    width: 90px;
+    margin-bottom: 20px;
+    opacity: .9;
+}
+
+/* العنوان */
+.service-card h3 {
+    font-size: 24px;
+    font-weight: 800;
+    margin-bottom: 15px;
+    color: var(--turquoise);
+}
+
+/* النص */
+.service-card p {
+    font-size: 18px;
+    line-height: 1.8;
+    opacity: .85;
+}
+
+/* ================================
+   الفوتر
+================================ */
+.footer {
+    padding: 25px;
+    text-align: center;
+    color: #fff;
+    opacity: .8;
+    background: #00000020;
+    margin-top: 80px;
+}
+
+/* ================================
+   الموبايل
+================================ */
+@media (max-width: 992px) {
+    .services-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+}
+
+@media (max-width: 700px) {
+    .section-title {
+        font-size: 42px;
+    }
+
+    .services-container {
+        grid-template-columns: 1fr;
+    }
+
+    .service-card {
+        padding: 25px;
+    }
+}

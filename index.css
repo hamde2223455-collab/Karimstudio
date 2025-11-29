@@ -1,0 +1,260 @@
+/* ================================
+   Home Page – Karim
+   File: css/index.css
+================================ */
+
+/* ألوان الموقع */
+:root {
+    --blue: #00224D;
+    --purple: #5C2ED5;
+    --turquoise: #2CD3E1;
+    --gradient: linear-gradient(135deg, #2CD3E1, #5C2ED5, #00224D);
+}
+
+/* ================================
+   الصفحة كاملة
+================================ */
+body {
+    margin: 0;
+    padding: 0;
+    background: var(--blue);
+    font-family: "Cairo", sans-serif;
+    color: #fff;
+}
+
+/* ================================
+   الهيدر (شريط التنقل)
+================================ */
+.main-header {
+    width: 100%;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background: rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(6px);
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: 900;
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav ul li a {
+    color: #fff;
+    font-size: 18px;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.nav ul li a:hover,
+.nav ul li a.active {
+    color: var(--turquoise);
+    font-weight: 700;
+}
+
+/* زر الموبايل */
+.menu-btn {
+    display: none;
+}
+
+/* ================================
+   الهيرو سيكشن
+================================ */
+.hero {
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 160px;
+    padding-bottom: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+.hero-content {
+    flex: 1;
+}
+
+.hero-content h1 {
+    font-size: 60px;
+    font-weight: 900;
+    margin-bottom: 15px;
+}
+
+.hero-content h1 span {
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.hero-content p {
+    font-size: 20px;
+    line-height: 1.8;
+    opacity: .9;
+}
+
+.main-btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 15px 30px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+    background: var(--gradient);
+    text-decoration: none;
+    border-radius: 10px;
+    transition: .3s;
+}
+
+.main-btn:hover {
+    opacity: .8;
+}
+
+/* صورة الهيرو */
+.hero-img {
+    position: relative;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-img img {
+    width: 380px;
+    position: relative;
+    z-index: 3;
+    filter: drop-shadow(0 8px 25px rgba(0,0,0,0.3));
+}
+
+.hero-img .shadow {
+    position: absolute;
+    width: 480px;
+    bottom: -40px;
+    opacity: 0.35;
+    z-index: 1;
+}
+
+/* ================================
+   سكشن "مين أنا؟"
+================================ */
+.about-preview {
+    width: 90%;
+    margin: 80px auto;
+    background: #ffffff10;
+    padding: 50px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    backdrop-filter: blur(4px);
+}
+
+.about-preview .text {
+    flex: 1;
+}
+
+.about-preview h2 {
+    font-size: 40px;
+    font-weight: 900;
+    margin-bottom: 20px;
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.about-preview p {
+    font-size: 18px;
+    line-height: 1.8;
+    opacity: .85;
+    margin-bottom: 20px;
+}
+
+.sec-btn {
+    display: inline-block;
+    padding: 12px 26px;
+    background: var(--purple);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: .3s;
+    font-weight: 700;
+}
+
+.sec-btn:hover {
+    background: var(--turquoise);
+}
+
+/* صورة الميني أبوت */
+.about-preview .img {
+    position: relative;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.about-preview .img img {
+    width: 330px;
+    z-index: 3;
+}
+
+.about-preview .img .torn {
+    position: absolute;
+    width: 360px;
+    top: -25px;
+    opacity: .8;
+    z-index: 1;
+}
+
+/* ================================
+   الفوتر
+================================ */
+.footer {
+    margin-top: 100px;
+    padding: 25px;
+    text-align: center;
+    color: #fff;
+    opacity: .8;
+    background: #00000020;
+}
+
+/* ================================
+   استجابة الموبايل
+================================ */
+@media (max-width: 768px) {
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-content h1 {
+        font-size: 42px;
+    }
+
+    .hero-img img {
+        width: 280px;
+    }
+
+    .about-preview {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-preview .img img {
+        width: 260px;
+    }
+}

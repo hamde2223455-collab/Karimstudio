@@ -1,0 +1,244 @@
+/* ================================
+   Contact Page – Karim
+   File: css/contact.css
+================================ */
+
+/* ألوان الموقع */
+:root {
+    --blue: #00224D;
+    --purple: #5C2ED5;
+    --turquoise: #2CD3E1;
+    --gradient: linear-gradient(135deg, #2CD3E1, #5C2ED5, #00224D);
+}
+
+/* ================================
+   الصفحة كاملة
+================================ */
+body {
+    margin: 0;
+    padding: 0;
+    background: var(--blue);
+    font-family: "Cairo", sans-serif;
+    color: #fff;
+}
+
+/* ================================
+   الهيدر
+================================ */
+.main-header {
+    width: 100%;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background: rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(6px);
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: 900;
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: .3s;
+}
+
+.nav ul li a:hover,
+.nav ul li a.active {
+    color: var(--turquoise);
+    font-weight: 700;
+}
+
+/* ================================
+   عنوان الصفحة
+================================ */
+.section-title {
+    font-size: 55px;
+    font-weight: 900;
+    margin-bottom: 20px;
+    text-align: center;
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    color: transparent;
+    margin-top: 150px;
+}
+
+.contact-intro {
+    text-align: center;
+    font-size: 20px;
+    opacity: .9;
+    margin-bottom: 50px;
+    line-height: 1.8;
+}
+
+/* ================================
+   المحتوى الأساسي
+================================ */
+.contact-container {
+    width: 90%;
+    margin: 0 auto 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 50px;
+}
+
+/* ================================
+   نموذج التواصل
+================================ */
+.contact-form {
+    flex: 1;
+    background: #ffffff10;
+    padding: 30px;
+    border-radius: 15px;
+    border-left: 6px solid var(--turquoise);
+    backdrop-filter: blur(6px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
+}
+
+.input-group label {
+    font-size: 18px;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 6px;
+}
+
+.input-group input,
+.input-group textarea {
+    width: 100%;
+    padding: 14px;
+    border-radius: 10px;
+    border: 2px solid #ccc;
+    margin-bottom: 20px;
+    font-size: 18px;
+    transition: .3s;
+    font-family: "Cairo";
+}
+
+.input-group input:focus,
+.input-group textarea:focus {
+    border-color: var(--purple);
+}
+
+.contact-form textarea {
+    resize: none;
+}
+
+/* زرار الإرسال */
+.main-btn {
+    width: 100%;
+    padding: 15px;
+    font-size: 20px;
+    font-weight: 800;
+    background: var(--gradient);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.main-btn:hover {
+    opacity: .85;
+}
+
+/* ================================
+   صندوق معلومات التواصل
+================================ */
+.contact-info {
+    flex: 1;
+    background: #ffffff10;
+    padding: 30px;
+    border-radius: 15px;
+    border-right: 6px solid var(--purple);
+    backdrop-filter: blur(6px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
+    position: relative;
+}
+
+.contact-info h3 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    font-weight: 900;
+    color: var(--turquoise);
+}
+
+.contact-info p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    line-height: 1.8;
+}
+
+.contact-info a {
+    font-size: 20px;
+    color: var(--turquoise);
+    font-weight: 700;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.contact-info a:hover {
+    color: #fff;
+}
+
+/* الصورة الجانبية */
+.contact-doodle {
+    width: 160px;
+    opacity: .7;
+    position: absolute;
+    bottom: -20px;
+    left: -20px;
+}
+
+/* ================================
+   الفوتر
+================================ */
+.footer {
+    padding: 25px;
+    text-align: center;
+    color: #fff;
+    opacity: .8;
+    margin-top: 70px;
+    background: #00000020;
+}
+
+/* ================================
+   الموبايل
+================================ */
+@media (max-width: 768px) {
+
+    .section-title {
+        font-size: 40px;
+    }
+
+    .contact-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .contact-info,
+    .contact-form {
+        width: 100%;
+    }
+
+    .contact-doodle {
+        display: none;
+    }
+}

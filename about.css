@@ -1,0 +1,192 @@
+/* ================================
+   About Page – Karim
+   File: css/about.css
+================================ */
+
+/* ألوان الموقع */
+:root {
+    --blue: #00224D;
+    --purple: #5C2ED5;
+    --turquoise: #2CD3E1;
+    --gradient: linear-gradient(135deg, #2CD3E1, #5C2ED5, #00224D);
+}
+
+/* ================================
+   الصفحة كاملة
+================================ */
+body {
+    margin: 0;
+    padding: 0;
+    background: var(--blue);
+    font-family: "Cairo", sans-serif;
+    color: #fff;
+}
+
+/* ================================
+   الهيدر
+================================ */
+.main-header {
+    width: 100%;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background: rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(6px);
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: 900;
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: .3s;
+}
+
+.nav ul li a:hover,
+.nav ul li a.active {
+    color: var(--turquoise);
+    font-weight: 700;
+}
+
+/* ================================
+   محتوى صفحة عني
+================================ */
+.about-page {
+    width: 90%;
+    margin: 150px auto 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text h1 {
+    font-size: 55px;
+    font-weight: 900;
+    margin-bottom: 20px;
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.about-text p {
+    font-size: 20px;
+    line-height: 1.9;
+    opacity: .9;
+    margin-bottom: 18px;
+}
+
+.main-btn {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 14px 30px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+    background: var(--gradient);
+    border-radius: 10px;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.main-btn:hover {
+    opacity: .85;
+}
+
+/* ================================
+   البولارويد – الصورة الجانبية
+================================ */
+.about-img {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.polaroid-wrapper {
+    width: 350px;
+    position: relative;
+}
+
+.polaroid {
+    width: 100%;
+    position: relative;
+    z-index: 3;
+    filter: drop-shadow(0 8px 25px rgba(0,0,0,0.3));
+}
+
+.torn {
+    position: absolute;
+    width: 120%;
+    top: -25px;
+    left: -35px;
+    opacity: .8;
+    z-index: 1;
+}
+
+.shadow {
+    position: absolute;
+    width: 130%;
+    bottom: -40px;
+    left: -15px;
+    opacity: .35;
+    z-index: 0;
+}
+
+/* ================================
+   الفوتر
+================================ */
+.footer {
+    margin-top: 100px;
+    padding: 25px;
+    text-align: center;
+    color: #fff;
+    opacity: .8;
+    background: #00000020;
+}
+
+/* ================================
+   استجابة الموبايل
+================================ */
+@media (max-width: 768px) {
+
+    .about-page {
+        flex-direction: column;
+        text-align: center;
+        margin-top: 120px;
+    }
+
+    .about-text h1 {
+        font-size: 42px;
+    }
+
+    .about-text p {
+        font-size: 18px;
+    }
+
+    .polaroid-wrapper {
+        width: 260px;
+    }
+}

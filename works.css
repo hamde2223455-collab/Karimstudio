@@ -1,0 +1,154 @@
+/* ===========================
+   إعدادات عامة
+=========================== */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Cairo', sans-serif;
+    background: linear-gradient(180deg, #001F4D 0%, #00285F 60%, #0A0033 100%);
+    color: #fff;
+}
+
+/* ===========================
+   الهيدر
+=========================== */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    backdrop-filter: blur(12px);
+    background: rgba(0, 0, 0, 0.25);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: auto;
+    padding: 18px 22px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: 900;
+    text-decoration: none;
+    background: linear-gradient(45deg, #00C6FF, #7D2FFF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 28px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    font-size: 17px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #00C6FF;
+}
+
+.nav-links .active {
+    color: #00C6FF;
+    font-weight: 700;
+}
+
+/* ===========================
+   هيدر صفحة الأعمال
+=========================== */
+.works-header {
+    text-align: center;
+    padding: 80px 20px 40px;
+}
+
+.works-header h1 {
+    font-size: 46px;
+    font-weight: 900;
+    margin-bottom: 10px;
+
+    background: linear-gradient(45deg, #7D2FFF, #00C6FF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.works-header p {
+    font-size: 18px;
+    color: #DADADA;
+    max-width: 650px;
+    margin: auto;
+    line-height: 1.9;
+}
+
+/* ===========================
+   الجاليري
+=========================== */
+.works-gallery {
+    max-width: 1200px;
+    margin: 50px auto 80px;
+    padding: 0 25px;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 35px;
+}
+
+.work-card {
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 18px;
+    padding: 22px;
+    text-decoration: none;
+    color: #fff;
+
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.10);
+
+    transition: 0.3s ease;
+}
+
+.work-card:hover {
+    transform: translateY(-8px);
+    border-color: #00C6FF;
+    background: rgba(255, 255, 255, 0.10);
+}
+
+.work-card img {
+    width: 100%;
+    height: 190px;
+    object-fit: contain;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.work-card h3 {
+    font-size: 22px;
+    font-weight: 700;
+    margin: 8px 0 10px;
+
+    background: linear-gradient(45deg, #7D2FFF, #00C6FF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.work-card p {
+    font-size: 15px;
+    color: #EAEAEA;
+    line-height: 1.8;
+}
+
+/* ===========================
+   موبايل
+=========================== */
+@media(max-width: 600px) {
+    .works-header h1 {
+        font-size: 34px;
+    }
+}
